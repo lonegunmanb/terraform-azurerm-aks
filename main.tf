@@ -89,7 +89,7 @@ resource "azurerm_kubernetes_cluster" "main" {
 
   maintenance_window {
     dynamic "allowed" {
-      for_each = var.enable_maintenance_window == true ? var.maintenanceAllowed : []
+      for_each = var.enable_maintenance_window == true ? var.maintenance_allowed : []
       content {
         day = allowed.value.day
         hours = allowed.value.hours
@@ -97,7 +97,7 @@ resource "azurerm_kubernetes_cluster" "main" {
     }
 
     dynamic "not_allowed" {
-      for_each = var.enable_maintenance_window == true ? var.maintenanceNotAllowed : []
+      for_each = var.enable_maintenance_window == true ? var.maintenance_not_allowed : []
       content {
         start = not_allowed.value.start
         end = not_allowed.value.end
