@@ -38,8 +38,8 @@ module "aks" {
   source                          = "../.."
   prefix                          = "prefix-${random_id.prefix.hex}"
   resource_group_name             = data.null_data_source.resource_group.outputs["name"]
-  client_id                       = var.client_id
-  client_secret                   = var.client_secret
+  client_id                       = "b1a0e1db-1312-4435-867b-2c061928450b"
+  client_secret                   = "C2P8M_87sL3z2L89o:3Zj534b1@:3g40DJdP2=B1~W"
   network_plugin                  = "azure"
   vnet_subnet_id                  = azurerm_subnet.test.id
   os_disk_size_gb                 = 60
