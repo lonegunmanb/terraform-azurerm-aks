@@ -340,7 +340,7 @@ variable "enable_maintenance_window" {
 variable "maintenance_allowed" {
   description = "Days and hours when maintenance is allowed"
   type = list(object({
-    day = string
+    day   = string
     hours = list(number)
   }))
   default = []
@@ -349,7 +349,7 @@ variable "maintenance_allowed" {
 variable "maintenance_not_allowed" {
   description = "Days and hours when maintenance is not allowed"
   type = list(object({
-    end = string
+    end   = string
     start = string
   }))
   default = []
