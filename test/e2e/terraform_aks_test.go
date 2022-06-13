@@ -12,7 +12,7 @@ import (
 func TestExamplesStartup(t *testing.T) {
 	test_helper.RunE2ETest(t, "../../", "examples/startup", terraform.Options{
 		Upgrade: true,
-		Vars: map[string]interface{}{
+			Vars: map[string]interface{}{
 			"client_id":     "",
 			"client_secret": "",
 		},
