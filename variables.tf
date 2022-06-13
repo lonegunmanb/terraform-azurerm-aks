@@ -330,3 +330,9 @@ variable "node_resource_group" {
   type        = string
   default     = null
 }
+
+variable "unused_variable" {
+  description = "This is an unused variable and it should be stopped by ci."
+  type        = string
+  default     = null
+}
