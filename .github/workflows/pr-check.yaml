@@ -13,7 +13,6 @@ jobs:
   prepr-check:
     runs-on: ubuntu-latest
     permissions:
-#      issues: write
       pull-requests: write
     steps:
       - name: checkout
@@ -21,11 +20,10 @@ jobs:
       - uses: jwalton/gh-find-current-pr@v1
         id: PR
         with:
-          # Can be "open", "closed", or "all".  Defaults to "open".
           state: open
-#      - name: pr-check
-#        run: |
-#         docker run --rm -v $(pwd):/src -w /src -e SKIP_CHECKOV mcr.microsoft.com/azterraform:latest make pr-check
+      - name: pr-check
+        run: |
+         docker run --rm -v $(pwd):/src -w /src -e SKIP_CHECKOV mcr.microsoft.com/azterraform:latest make pr-check
       - name: Breaking Change Brief
         run: |
           change=$(docker run --rm -t -v $(pwd):/src -w /src mcr.microsoft.com/azterraform:latest breaking_detect /src ${{ github.repository_owner }} ${{ github.event.repository.name }} ${{ github.base_ref }})
