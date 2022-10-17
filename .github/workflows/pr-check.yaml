@@ -22,8 +22,8 @@ jobs:
 #         docker run --rm -v $(pwd):/src -w /src -e SKIP_CHECKOV mcr.microsoft.com/azterraform:latest make pr-check
       - name: Breaking Change Brief
         run: |
-          change=$(docker run --rm -v $(pwd):/src -w /src mcr.microsoft.com/azterraform:latest breaking_detect /src ${{ github.repository_owner }} ${{ github.event.repository.name }} ${{ github.base_ref }})
-          echo "CHANGE IS" $change
+          change=$(docker run --rm -t -v $(pwd):/src -w /src mcr.microsoft.com/azterraform:latest breaking_detect /src ${{ github.repository_owner }} ${{ github.event.repository.name }} ${{ github.base_ref }})
+          echo "CHANGE IS" "${change}"
           echo "PR NUMBER IS" ${{ steps.PR.outputs.number }}
           if [ ! -z "$change" ]; then
             echo "CHANGE IS NOT EMPTY"
