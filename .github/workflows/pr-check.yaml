@@ -12,8 +12,7 @@ on:
 jobs:
   prepr-check:
     runs-on: ubuntu-latest
-    permissions:
-      issues: write
+    permissions: write-all
     steps:
       - name: checkout
         uses: actions/checkout@v3
