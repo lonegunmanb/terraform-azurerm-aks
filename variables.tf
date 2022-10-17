@@ -66,7 +66,7 @@ variable "agents_pool_name" {
   type        = string
   description = "The default Azure AKS agentpool (nodepool) name."
   default     = "nodepool"
-  nullable    = false
+  nullable    = true
 }
 
 variable "agents_size" {
