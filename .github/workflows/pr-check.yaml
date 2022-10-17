@@ -13,19 +13,10 @@ jobs:
   prepr-check:
     runs-on: ubuntu-latest
     permissions:
-#      actions: read|write|none
-#      checks: read|write|none
-      contents: write
-#      deployments: read|write|none
-#      id-token: read|write|none
+#      contents: write
       issues: write
-#      discussions: read|write|none
-#      packages: read|write|none
-#      pages: read|write|none
       pull-requests: write
-      repository-projects: write
-#      security-events: read|write|none
-#      statuses: read|write|none
+#      repository-projects: write
     steps:
       - name: checkout
         uses: actions/checkout@v3
