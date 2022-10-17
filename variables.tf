@@ -11,7 +11,7 @@ variable "resource_group_name" {
 variable "aci_connector_linux_enabled" {
   description = "Enable Virtual Node pool"
   type        = bool
-  default     = false
+  default     = true
 }
 
 variable "aci_connector_linux_subnet_name" {
