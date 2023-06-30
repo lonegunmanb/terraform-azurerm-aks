@@ -473,6 +473,10 @@ resource "azurerm_kubernetes_cluster" "main" {
       condition     = can(coalesce(var.cluster_name, var.prefix))
       error_message = "You must set one of `var.cluster_name` and `var.prefix` to create `azurerm_kubernetes_cluster.main`."
     }
+    precondition {
+      condition     = true
+      error_message = "not possible"
+    }
   }
 }
 
