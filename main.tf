@@ -40,7 +40,7 @@ resource "azurerm_kubernetes_cluster" "main" {
     avm_git_last_modified_at = "2023-06-05 02:21:33"
     avm_git_org              = "lonegunmanb"
     avm_git_repo             = "terraform-azurerm-aks"
-    avm_yor_trace            = "58bbed71-4482-422d-bb0d-7bb199777fb0"
+    avm_yor_trace            = "7ffb2cb8-86f2-49cf-96b7-38404dcc84ba"
     } /*<box>*/ : replace(k, "avm_", var.tracing_tags_prefix) => v } : {}) /*</box>*/), (/*<box>*/ (var.tracing_tags_enabled ? { for k, v in /*</box>*/ {
     avm_yor_name = "main"
   } /*<box>*/ : replace(k, "avm_", var.tracing_tags_prefix) => v } : {}) /*</box>*/))
@@ -551,7 +551,7 @@ resource "azurerm_kubernetes_cluster_node_pool" "node_pool" {
     avm_git_last_modified_at = "2023-05-04 05:02:32"
     avm_git_org              = "lonegunmanb"
     avm_git_repo             = "terraform-azurerm-aks"
-    avm_yor_trace            = "d0c8c304-5d33-4ac9-be15-027fa2d5c9f1"
+    avm_yor_trace            = "4f0980c2-6a01-4106-a14b-a1a80e921246"
     } /*<box>*/ : replace(k, "avm_", var.tracing_tags_prefix) => v } : {}) /*</box>*/), (/*<box>*/ (var.tracing_tags_enabled ? { for k, v in /*</box>*/ {
     avm_yor_name = "node_pool"
   } /*<box>*/ : replace(k, "avm_", var.tracing_tags_prefix) => v } : {}) /*</box>*/))
@@ -695,7 +695,7 @@ resource "azurerm_log_analytics_workspace" "main" {
     avm_git_last_modified_at = "2023-06-05 02:21:33"
     avm_git_org              = "lonegunmanb"
     avm_git_repo             = "terraform-azurerm-aks"
-    avm_yor_trace            = "d8612562-5ba5-48e5-a488-cb22e25cfec5"
+    avm_yor_trace            = "13988f91-0017-46ed-8716-bb4161df68d8"
     } /*<box>*/ : replace(k, "avm_", var.tracing_tags_prefix) => v } : {}) /*</box>*/), (/*<box>*/ (var.tracing_tags_enabled ? { for k, v in /*</box>*/ {
     avm_yor_name = "main"
   } /*<box>*/ : replace(k, "avm_", var.tracing_tags_prefix) => v } : {}) /*</box>*/))
@@ -735,7 +735,7 @@ resource "azurerm_log_analytics_solution" "main" {
     avm_git_last_modified_at = "2023-06-01 03:13:59"
     avm_git_org              = "lonegunmanb"
     avm_git_repo             = "terraform-azurerm-aks"
-    avm_yor_trace            = "e54ee972-d21a-4a1c-8e02-ca726fb010af"
+    avm_yor_trace            = "28247a0c-3f25-4942-8108-0b37824a2d17"
     } /*<box>*/ : replace(k, "avm_", var.tracing_tags_prefix) => v } : {}) /*</box>*/), (/*<box>*/ (var.tracing_tags_enabled ? { for k, v in /*</box>*/ {
     avm_yor_name = "main"
   } /*<box>*/ : replace(k, "avm_", var.tracing_tags_prefix) => v } : {}) /*</box>*/))
