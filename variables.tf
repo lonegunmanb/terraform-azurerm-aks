@@ -1409,24 +1409,12 @@ variable "workload_identity_enabled" {
 
 variable "agents_pool_node_network_profile" {
   type = object({
-    application_security_group_ids = optional(list(string))
-    node_public_ip_tags            = optional(map(string))
-    allowed_host_ports = optional(list(object({
-      port_end   = optional(number)
-      port_start = optional(number)
-      protocol   = optional(string)
-    })), [])
+    node_public_ip_tags = optional(map(string))
   })
   default     = null
   description = <<-EOT
    ---
  `node_network_profile` block supports the following:
- - `application_security_group_ids` - (Optional) A list of Application Security Group IDs which should be associated with this Node Pool.
  - `node_public_ip_tags` - (Optional) Specifies a mapping of tags to the instance-level public IPs. Changing this forces a new resource to be created.
- ---
- `allowed_host_ports` block supports the following:
- - `port_end` - (Optional) Specifies the end of the port range.
- - `port_start` - (Optional) Specifies the start of the port range.
- - `protocol` - (Optional) Specifies the protocol of the port range. Possible values are `TCP` and `UDP`.
 EOT
 }
