@@ -1,5 +1,5 @@
 {
-  "image": "mcr.microsoft.com/azterraform:latest",
+  "image": "uhub.service.ucloud.cn/elegant_project/azterraform:latest",
 
   "runArgs": [
 		"--cap-add=SYS_PTRACE",
@@ -25,5 +25,10 @@
         "golang.Go"
       ]
     }
+  },
+  "features": {
+	"ghcr.io/devcontainers/features/sshd:1": {
+		"version": "latest"
+	}
   }
 }
